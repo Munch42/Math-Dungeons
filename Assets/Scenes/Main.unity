@@ -1076,6 +1076,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInjured: {fileID: 452252243}
   monsterInjured: {fileID: 1145522081}
+  monsterInjureText: {fileID: 1145522079}
+  playerInjureText: {fileID: 452252244}
 --- !u!1 &1504201856
 GameObject:
   m_ObjectHideFlags: 0
