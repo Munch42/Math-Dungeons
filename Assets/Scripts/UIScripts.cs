@@ -20,6 +20,17 @@ public class UIScripts : MonoBehaviour {
     //Attack Buttons
     public GameObject attackButtons;
 
+    //Multiple Choice Buttons and Text
+    public GameObject MultipleChoiceButtons;
+
+    public Text choice1;
+    public Text choice2;
+    public Text choice3;
+    public Text choice4;
+
+    //Math Question
+    private int mathQuestionNumber;
+    
     // Use this for initialization
     void Start () {
 		
@@ -34,6 +45,19 @@ public class UIScripts : MonoBehaviour {
 
         attackButtons.SetActive(true);
         backButton.SetActive(true);
+    }
+
+    public void OnMultipleChoiceClick()
+    {
+        attackButtons.SetActive(false);
+
+        backButton.SetActive(true);
+        MultipleChoiceButtons.SetActive(true);
+    }
+
+    public void OnShortAnswerClick()
+    {
+
     }
 
     public void OnSpecialClick()
