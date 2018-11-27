@@ -103,5 +103,6 @@ public class UIScripts : MonoBehaviour {
         attackButtons.SetActive(false);
         comingSoonGameobject.SetActive(false);
         backButton.SetActive(false);
+        MultipleChoiceButtons.SetActive(false);
     }
 }

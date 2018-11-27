@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22b9771865cfc894dbde6ab2f2fb8869
+guid: 0b7e106dcc02e9847a4fd431b66a57f0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Gourmet Hearth
+  fontName: Kenney Mini
   fontNames:
-  - Gourmet Hearth
+  - Kenney Mini
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
