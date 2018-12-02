@@ -149,6 +149,7 @@ RectTransform:
   - {fileID: 2025143066}
   - {fileID: 777905370}
   - {fileID: 1563109351}
+  - {fileID: 1910518519}
   m_Father: {fileID: 404341572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -295,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comingSoonGameobject: {fileID: 2025143065}
   backButton: {fileID: 777905369}
+  mainScreenText: {fileID: 595770256}
   attackButton: {fileID: 2137933150}
   petButton: {fileID: 1972683771}
   specialButton: {fileID: 743113937}
@@ -305,6 +307,8 @@ MonoBehaviour:
   choice2: {fileID: 1994802546}
   choice3: {fileID: 1247439056}
   choice4: {fileID: 317842001}
+  questionText: {fileID: 1910518520}
+  questionGameobject: {fileID: 1910518518}
 --- !u!1 &310116146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2731,81 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1877171290}
+  m_CullTransparentMesh: 0
+--- !u!1 &1910518518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910518519}
+  - component: {fileID: 1910518521}
+  - component: {fileID: 1910518520}
+  m_Layer: 5
+  m_Name: QuestionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1910518519
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910518518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 212629979}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 2.55, y: -6.65}
+  m_SizeDelta: {x: 631.1, y: 30}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1910518520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910518518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 673d013dd723d6744abef6e34d773e75, type: 3}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Question Text
+--- !u!222 &1910518521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910518518}
   m_CullTransparentMesh: 0
 --- !u!1 &1972683771
 GameObject:

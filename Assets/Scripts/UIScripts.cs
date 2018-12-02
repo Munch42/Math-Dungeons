@@ -11,6 +11,9 @@ public class UIScripts : MonoBehaviour {
     //Back Button
     public GameObject backButton;
 
+    //Main Options Text
+    public GameObject mainScreenText;
+
     //Main Screen Buttons
     public GameObject attackButton;
     public GameObject petButton;
@@ -27,6 +30,11 @@ public class UIScripts : MonoBehaviour {
     public Text choice2;
     public Text choice3;
     public Text choice4;
+
+    //Question Text
+    public Text questionText;
+
+    public GameObject questionGameobject;
 
     //Math Question
     private int mathQuestionNumber;
@@ -49,15 +57,22 @@ public class UIScripts : MonoBehaviour {
 
     public void OnMultipleChoiceClick()
     {
+        MultipleChoice();
         attackButtons.SetActive(false);
+        mainScreenText.SetActive(false);
 
         backButton.SetActive(true);
         MultipleChoiceButtons.SetActive(true);
+        questionGameobject.SetActive(true);
     }
 
     public void OnShortAnswerClick()
     {
+        attackButtons.SetActive(false);
+        mainScreenText.SetActive(false);
 
+        backButton.SetActive(true);
+        questionGameobject.SetActive(true);
     }
 
     public void OnSpecialClick()
@@ -99,10 +114,29 @@ public class UIScripts : MonoBehaviour {
         petButton.SetActive(true);
         specialButton.SetActive(true);
         retreatButton.SetActive(true);
+        mainScreenText.SetActive(true);
 
         attackButtons.SetActive(false);
         comingSoonGameobject.SetActive(false);
         backButton.SetActive(false);
         MultipleChoiceButtons.SetActive(false);
+        questionGameobject.SetActive(false);
+    }
+
+    public void MultipleChoice()
+    {
+        int firstNumber;
+        int secondNumber;
+
+        mathQuestionNumber = Random.Range(1,31);
+
+        for (int i = 0; i < mathQuestionNumber; i++)
+        {
+            if (i == mathQuestionNumber)
+            {
+                
+            }
+            else return;
+        }
     }
 }
