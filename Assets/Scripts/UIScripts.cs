@@ -49,10 +49,22 @@ public class UIScripts : MonoBehaviour {
     //Declarations Outside of Methods
     int rightChoiceButton;
 
+    //Wrong And Right Answer Animations
+    public Animation incorrectAnimation;
+    public Animation correctAnimation;
+
+    public GameObject incorrectGamobject;
+    public GameObject correctGameobject;
+
+    public AudioSource wrongSound;
+    public AudioSource correctSound;
+
     // Use this for initialization
     void Start ()
     {
         questions = new string[30];
+        incorrectGamobject.SetActive(false);
+        correctGameobject.SetActive(false);
     }
 
     public void OnAttackClick()
@@ -132,6 +144,8 @@ public class UIScripts : MonoBehaviour {
         backButton.SetActive(false);
         MultipleChoiceButtons.SetActive(false);
         questionGameobject.SetActive(false);
+        incorrectGamobject.SetActive(false);
+        correctGameobject.SetActive(false);
     }
 
     public void MultipleChoice()
@@ -311,10 +325,16 @@ public class UIScripts : MonoBehaviour {
         if(rightChoiceButton == 1)
         {
             Debug.Log("Correct");
+            correctAnimation.Play();
+            correctGameobject.SetActive(true);
+            correctSound.Play();
         }
         else
         {
             Debug.Log("Wrong Answer");
+            incorrectAnimation.Play();
+            incorrectGamobject.SetActive(true);
+            wrongSound.Play();
         }
     }
 
@@ -323,10 +343,16 @@ public class UIScripts : MonoBehaviour {
         if (rightChoiceButton == 2)
         {
             Debug.Log("Correct");
+            correctAnimation.Play();
+            correctGameobject.SetActive(true);
+            correctSound.Play();
         }
         else
         {
             Debug.Log("Wrong Answer");
+            incorrectAnimation.Play();
+            incorrectGamobject.SetActive(true);
+            wrongSound.Play();
         }
     }
 
@@ -335,10 +361,16 @@ public class UIScripts : MonoBehaviour {
         if (rightChoiceButton == 3)
         {
             Debug.Log("Correct");
+            correctAnimation.Play();
+            correctGameobject.SetActive(true);
+            correctSound.Play();
         }
         else
         {
             Debug.Log("Wrong Answer");
+            incorrectAnimation.Play();
+            incorrectGamobject.SetActive(true);
+            wrongSound.Play();
         }
     }
 
@@ -347,10 +379,17 @@ public class UIScripts : MonoBehaviour {
         if (rightChoiceButton == 4)
         {
             Debug.Log("Correct");
+            correctAnimation.Play();
+            correctGameobject.SetActive(true);
+            correctSound.Play();
         }
         else
         {
             Debug.Log("Wrong Answer");
+
+            incorrectAnimation.Play();
+            incorrectGamobject.SetActive(true);
+            wrongSound.Play();
         }
     }
 }
