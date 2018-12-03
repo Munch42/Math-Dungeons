@@ -1396,7 +1396,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 269714511}
-        m_MethodName: OnSpecialClick
+        m_MethodName: Button2Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2007,7 +2007,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 269714511}
-        m_MethodName: OnAttackClick
+        m_MethodName: Button1Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2205,7 +2205,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 269714511}
-        m_MethodName: OnRetreatClick
+        m_MethodName: Button3Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2686,7 +2686,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 269714511}
-        m_MethodName: OnPetClick
+        m_MethodName: Button4Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

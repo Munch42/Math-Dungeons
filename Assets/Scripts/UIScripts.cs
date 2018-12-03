@@ -38,11 +38,22 @@ public class UIScripts : MonoBehaviour {
 
     //Math Question
     private int mathQuestionNumber;
-    
+
+    //Question Array
+    private string[] questions;
+
+    //Other String Things
+    private string prefix = "What is ";
+    private string suffix = "?";
+
+    //Declarations Outside of Methods
+    int rightChoiceButton;
+
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+        questions = new string[30];
+    }
 
     public void OnAttackClick()
     {
@@ -125,18 +136,221 @@ public class UIScripts : MonoBehaviour {
 
     public void MultipleChoice()
     {
-        int firstNumber;
-        int secondNumber;
+        string[] operators = new string[4];
+        operators[0] = " + ";
+        operators[1] = " - ";
+        operators[2] = " * ";
+        operators[3] = " / ";
+        int firstNumber = Random.Range(-50,101);
+        int secondNumber = Random.Range(-50, 101);
+        int operatorNumber = Random.Range(0, 4);
 
-        mathQuestionNumber = Random.Range(1,31);
+        rightChoiceButton = Random.Range(1,5);
+        int choice1Num = 0;
+        int choice2Num = 0;
+        int choice3Num = 0;
+        int choice4Num = 0;
 
-        for (int i = 0; i < mathQuestionNumber; i++)
+        questions[0] = prefix + firstNumber + operators[operatorNumber] + secondNumber + suffix;
+
+        if(rightChoiceButton == 1)
+        {
+            if(operatorNumber == 0)
+            {
+                choice1Num = firstNumber + secondNumber;
+                choice2Num = choice1Num + Random.Range(-20, 20);
+                choice3Num = choice1Num - Random.Range(-20, 20);
+                choice4Num = choice1Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 1)
+            {
+                choice1Num = firstNumber - secondNumber;
+                choice2Num = choice1Num + Random.Range(-20, 20);
+                choice3Num = choice1Num - Random.Range(-20, 20);
+                choice4Num = choice1Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 2)
+            {
+                choice1Num = firstNumber * secondNumber;
+                choice2Num = choice1Num + Random.Range(-20, 20);
+                choice3Num = choice1Num - Random.Range(-20, 20);
+                choice4Num = choice1Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 3)
+            {
+                choice1Num = firstNumber / secondNumber;
+                choice2Num = choice1Num + Random.Range(-20, 20);
+                choice3Num = choice1Num - Random.Range(-20, 20);
+                choice4Num = choice1Num * Random.Range(-20, 20);
+            }
+            choice1.text = choice1Num.ToString();
+            choice2.text = choice2Num.ToString();
+            choice3.text = choice3Num.ToString();
+            choice4.text = choice4Num.ToString();
+        }
+        else if(rightChoiceButton == 2)
+        {
+            if (operatorNumber == 0)
+            {
+                choice2Num = firstNumber + secondNumber;
+                choice1Num = choice2Num + Random.Range(-20, 20);
+                choice3Num = choice2Num - Random.Range(-20, 20);
+                choice4Num = choice2Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 1)
+            {
+                choice2Num = firstNumber - secondNumber;
+                choice1Num = choice2Num + Random.Range(-20, 20);
+                choice3Num = choice2Num - Random.Range(-20, 20);
+                choice4Num = choice2Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 2)
+            {
+                choice2Num = firstNumber * secondNumber;
+                choice1Num = choice2Num + Random.Range(-20, 20);
+                choice3Num = choice2Num - Random.Range(-20, 20);
+                choice4Num = choice2Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 3)
+            {
+                choice2Num = firstNumber / secondNumber;
+                choice1Num = choice2Num + Random.Range(-20, 20);
+                choice3Num = choice2Num - Random.Range(-20, 20);
+                choice4Num = choice2Num * Random.Range(-20, 20);
+            }
+            choice1.text = choice1Num.ToString();
+            choice2.text = choice2Num.ToString();
+            choice3.text = choice3Num.ToString();
+            choice4.text = choice4Num.ToString();
+        }
+        else if (rightChoiceButton == 3)
+        {
+            if (operatorNumber == 0)
+            {
+                choice3Num = firstNumber + secondNumber;
+                choice1Num = choice3Num + Random.Range(-20, 20);
+                choice2Num = choice3Num - Random.Range(-20, 20);
+                choice4Num = choice3Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 1)
+            {
+                choice3Num = firstNumber - secondNumber;
+                choice1Num = choice3Num + Random.Range(-20, 20);
+                choice2Num = choice3Num - Random.Range(-20, 20);
+                choice4Num = choice3Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 2)
+            {
+                choice3Num = firstNumber * secondNumber;
+                choice1Num = choice3Num + Random.Range(-20, 20);
+                choice2Num = choice3Num - Random.Range(-20, 20);
+                choice4Num = choice3Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 3)
+            {
+                choice3Num = firstNumber / secondNumber;
+                choice1Num = choice3Num + Random.Range(-20, 20);
+                choice2Num = choice3Num - Random.Range(-20, 20);
+                choice4Num = choice3Num * Random.Range(-20, 20);
+            }
+            choice1.text = choice1Num.ToString();
+            choice2.text = choice2Num.ToString();
+            choice3.text = choice3Num.ToString();
+            choice4.text = choice4Num.ToString();
+        }
+        else if (rightChoiceButton == 4)
+        {
+            if (operatorNumber == 0)
+            {
+                choice4Num = firstNumber + secondNumber;
+                choice1Num = choice4Num + Random.Range(-20, 20);
+                choice2Num = choice4Num - Random.Range(-20, 20);
+                choice3Num = choice4Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 1)
+            {
+                choice4Num = firstNumber - secondNumber;
+                choice1Num = choice4Num + Random.Range(-20, 20);
+                choice2Num = choice4Num - Random.Range(-20, 20);
+                choice3Num = choice4Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 2)
+            {
+                choice4Num = firstNumber * secondNumber;
+                choice1Num = choice4Num + Random.Range(-20, 20);
+                choice2Num = choice4Num - Random.Range(-20, 20);
+                choice3Num = choice4Num * Random.Range(-20, 20);
+            }
+            else if (operatorNumber == 3)
+            {
+                choice4Num = firstNumber / secondNumber;
+                choice1Num = choice4Num + Random.Range(-20, 20);
+                choice2Num = choice4Num - Random.Range(-20, 20);
+                choice3Num = choice4Num * Random.Range(-20, 20);
+            }
+            choice1.text = choice1Num.ToString();
+            choice2.text = choice2Num.ToString();
+            choice3.text = choice3Num.ToString();
+            choice4.text = choice4Num.ToString();
+        }
+
+        //mathQuestionNumber = Random.Range(0,31);
+        mathQuestionNumber = 0;
+
+        for (int i = 0; i <= mathQuestionNumber; i++)
         {
             if (i == mathQuestionNumber)
             {
-                
+                questionText.text = questions[i];
             }
-            else return;
+        }
+    }
+
+    public void Button1Pressed()
+    {
+        if(rightChoiceButton == 1)
+        {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong Answer");
+        }
+    }
+
+    public void Button2Pressed()
+    {
+        if (rightChoiceButton == 2)
+        {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong Answer");
+        }
+    }
+
+    public void Button3Pressed()
+    {
+        if (rightChoiceButton == 3)
+        {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong Answer");
+        }
+    }
+
+    public void Button4Pressed()
+    {
+        if (rightChoiceButton == 4)
+        {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong Answer");
         }
     }
 }
