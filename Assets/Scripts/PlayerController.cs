@@ -32,4 +32,16 @@ public class PlayerController : MonoBehaviour {
         }
         */
 	}
+
+    public void OnMonsterInjure(int damage)
+    {
+        monsterInjureText.text = damage.ToString();
+        monsterInjured.Play();
+    }
+
+    public void OnPlayerInjure(int damage)
+    {
+        playerInjureText.text = damage.ToString();
+        playerInjured.Play();
+    }
 }

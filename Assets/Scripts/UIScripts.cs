@@ -59,6 +59,9 @@ public class UIScripts : MonoBehaviour {
     public AudioSource wrongSound;
     public AudioSource correctSound;
 
+    //Player Controller Reference
+    public GameObject playerController;
+
     // Use this for initialization
     void Start ()
     {
@@ -328,6 +331,7 @@ public class UIScripts : MonoBehaviour {
             correctAnimation.Play();
             correctGameobject.SetActive(true);
             correctSound.Play();
+            DamageMonster();
         }
         else
         {
@@ -346,6 +350,7 @@ public class UIScripts : MonoBehaviour {
             correctAnimation.Play();
             correctGameobject.SetActive(true);
             correctSound.Play();
+            DamageMonster();
         }
         else
         {
@@ -364,6 +369,7 @@ public class UIScripts : MonoBehaviour {
             correctAnimation.Play();
             correctGameobject.SetActive(true);
             correctSound.Play();
+            DamageMonster();
         }
         else
         {
@@ -382,6 +388,7 @@ public class UIScripts : MonoBehaviour {
             correctAnimation.Play();
             correctGameobject.SetActive(true);
             correctSound.Play();
+            DamageMonster();
         }
         else
         {
@@ -392,4 +399,11 @@ public class UIScripts : MonoBehaviour {
             wrongSound.Play();
         }
     }
+
+    public void DamageMonster()
+    {
+        int damageDone = Random.Range(1, 51);
+        playerController.GetComponent<PlayerController>().OnMonsterInjure(damageDone);
+    }
+
 }

@@ -317,6 +317,7 @@ MonoBehaviour:
   correctGameobject: {fileID: 1261264517}
   wrongSound: {fileID: 1742826470}
   correctSound: {fileID: 1057359526}
+  playerController: {fileID: 1389038779}
 --- !u!1 &310116146
 GameObject:
   m_ObjectHideFlags: 0
